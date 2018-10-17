@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Card2 from "./Card2";
 import { Button } from "reactstrap";
 import APIURL from "../helpers/environment";
+import CardCreate from "./CardCreate";
 
 class CardLayout extends Component {
   constructor(props) {
@@ -98,6 +99,14 @@ class CardLayout extends Component {
   render() {
     return (
       <div style={{ width: "500px" }}>
+        <div>
+          {this.state.cardTotal < 1 ? (
+            <CardCreate
+              updateCardsArray={this.fetchCards}
+              token={this.props.token}
+            />
+          ) : null}
+        </div>
         <div>
           {this.state.cardTotal >= 1 ? (
             <Card2
