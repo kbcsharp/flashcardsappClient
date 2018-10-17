@@ -66,9 +66,11 @@ class CardEdit extends React.Component {
   render() {
     return (
       <div>
-        <Button className="btn-sm mb-4" onClick={this.toggle}>
-          <FontAwesomeIcon icon="edit" />
-        </Button>
+        <FontAwesomeIcon
+          style={{ fontSize: "2em" }}
+          onClick={this.toggle}
+          icon="edit"
+        />
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
           <ModalHeader style={{ backgroundColor: "#C63456", color: "white" }}>
             Edit Flashcard

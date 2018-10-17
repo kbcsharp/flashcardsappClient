@@ -25,16 +25,7 @@ const FrontComponent2 = props => {
       >
         {props.number} of {props.total}
       </div>
-      {/* <div
-        style={{
-          height: "300px",
-          width: "500px",
-          display: "flex",
-          flexDirection: "column",
-          textAlign: "center",
-          justifyContent: "space-between"
-        }}
-      > */}
+
       <div>
         <h4 style={{ margin: "-80px" }}>{props.category}</h4>
       </div>
@@ -54,17 +45,18 @@ const FrontComponent2 = props => {
         ) : (
           <div />
         )}
-        <Button
-          style={{ width: "30px" }}
-          className="btn-sm"
+
+        <FontAwesomeIcon
+          style={{ fontSize: "2em" }}
           onClick={props.handleClick}
-        >
-          <FontAwesomeIcon icon="share" />
-        </Button>
+          icon="share"
+        />
         {props.number < props.total ? (
-          <Button onClick={props.nextCard}>
-            <FontAwesomeIcon icon="angle-right" />
-          </Button>
+          <FontAwesomeIcon
+            style={{ fontSize: "2em" }}
+            onClick={props.nextCard}
+            icon="angle-right"
+          />
         ) : (
           <div />
         )}

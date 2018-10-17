@@ -72,7 +72,6 @@ class DeckCardsLayout extends Component {
 
   getCurrentCard = () => {
     let currentCardHolder = this.state.deck[this.state.index];
-    console.log(currentCardHolder);
     this.setState({
       currentCard: currentCardHolder,
       cardTotal: this.state.deck.length
@@ -118,7 +117,9 @@ class DeckCardsLayout extends Component {
   render() {
     return (
       <div style={{ textAlign: "center" }}>
-        <Button onClick={this.getCategories}>Display/Update Decks</Button>
+        <Button className="mt-2" onClick={this.getCategories}>
+          Display/Update Decks
+        </Button>
         <div>
           <Form onSubmit={this.showDeck}>
             <FormGroup style={{ display: "flex", justifyContent: "center" }}>

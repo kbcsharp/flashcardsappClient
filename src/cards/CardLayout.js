@@ -97,28 +97,6 @@ class CardLayout extends Component {
   render() {
     return (
       <div style={{ width: "500px" }}>
-        {/* <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-          <CardCreate
-            token={this.props.token}
-            updateCardsArray={this.fetchCards}
-          />
-          {this.state.cardNumber >= 1 ? (
-            <CardEdit
-              token={this.props.token}
-              cardnow={this.state.currentCard}
-              updateCardsArray={this.fetchCards}
-              updateCard={this.getCurrentCard}
-            />
-          ) : (
-            <div />
-          )}
-          <CardDelete
-            token={this.props.token}
-            cardnow={this.state.currentCard}
-            updateCardsArray={this.fetchCards}
-            updateCard={this.getCurrentCard}
-          />
-        </div> */}
         <div>
           {this.state.cardTotal >= 1 ? (
             <Card2
@@ -135,28 +113,6 @@ class CardLayout extends Component {
             />
           ) : null}
         </div>
-        {/* <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            marginTop: "300px"
-          }}
-        > */}
-        {/* {this.state.cardNumber > 1 ? (
-            <Button onClick={this.prevCard}>
-              <FontAwesomeIcon icon="angle-left" />
-            </Button>
-          ) : (
-            <div />
-          )} */}
-        {/* {this.state.cardNumber < this.state.cardTotal ? (
-            <Button onClick={this.nextCard}>
-              <FontAwesomeIcon icon="angle-right" />
-            </Button>
-          ) : (
-            <div />
-          )} */}
-        {/* </div> */}
       </div>
     );
   }

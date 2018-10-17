@@ -58,7 +58,7 @@ const FrontComponent = props => {
           textAlign: "center",
           justifyContent: "space-between",
           alignItems: "center",
-          paddingTop: "50px"
+          paddingTop: "65px"
         }}
       >
         <div style={{ width: "400px" }}>{props.question}</div>
@@ -71,25 +71,27 @@ const FrontComponent = props => {
           }}
         >
           {props.number > 1 ? (
-            <Button onClick={props.prevCard}>
-              <FontAwesomeIcon icon="angle-left" />
-            </Button>
+            <FontAwesomeIcon
+              style={{ fontSize: "2em" }}
+              onClick={props.prevCard}
+              icon="angle-left"
+            />
           ) : (
-            <div />
+            <div style={{ width: "17px" }} />
           )}
-          <Button
-            style={{ width: "30px" }}
-            className="btn-sm"
+          <FontAwesomeIcon
+            style={{ fontSize: "2em" }}
             onClick={props.handleClick}
-          >
-            <FontAwesomeIcon icon="share" />
-          </Button>
+            icon="share"
+          />
           {props.number < props.total ? (
-            <Button onClick={props.nextCard}>
-              <FontAwesomeIcon icon="angle-right" />
-            </Button>
+            <FontAwesomeIcon
+              style={{ fontSize: "2em" }}
+              icon="angle-right"
+              onClick={props.nextCard}
+            />
           ) : (
-            <div />
+            <div style={{ width: "16px" }} />
           )}
         </div>
       </div>

@@ -41,26 +41,6 @@ class CardDelete extends React.Component {
     });
   };
 
-  // cardUpdate = (event, card) => {
-  //   ///change to currentCard
-  //   fetch(`http://localhost:3001/card/${card.id}/update`, {
-  //     //here also
-  //     method: "PUT",
-  //     body: JSON.stringify({ card: card }), //here also
-  //     headers: new Headers({
-  //       "Content-Type": "application/json",
-  //       Authorization: this.props.token
-  //     })
-  //   }).then(res => {
-  //     // this.setState({ updatePressed: false });
-  //     this.props.updateCardsArray();
-  //     this.props.updateCard();
-  //     this.setState({
-  //       modal: false
-  //     });
-  //   });
-  // };
-
   toggle = () => {
     this.setState({
       id: this.props.cardnow.id,
@@ -85,9 +65,11 @@ class CardDelete extends React.Component {
   render() {
     return (
       <div>
-        <Button className="btn-sm mb-4" onClick={this.toggle}>
-          <FontAwesomeIcon icon="times" />
-        </Button>
+        <FontAwesomeIcon
+          style={{ color: "red", fontSize: "2em" }}
+          onClick={this.toggle}
+          icon="times"
+        />
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
           <ModalHeader style={{ backgroundColor: "#C63456", color: "white" }}>
             Delete Flashcard
