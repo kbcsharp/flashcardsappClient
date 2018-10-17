@@ -1,0 +1,11 @@
+.jumbotron {
+  background-color: #286b88;
+  height: 100vh;
+  color: #d8bc38;
+  color: white;
+}
+
+.auth-buttons {
+  display: flex;
+  justify-content: center;
+}
