@@ -3,6 +3,7 @@ import { Form, FormGroup, Button, Input } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import deck from "../deck.jpeg";
 import DeckCard from "./DeckCard";
+import APIURL from "../helpers/environment";
 
 class DeckCardsLayout extends Component {
   constructor(props) {
@@ -23,7 +24,7 @@ class DeckCardsLayout extends Component {
   }
 
   fetchCardsAll = () => {
-    fetch("http://localhost:3001/card/getall", {
+    fetch(`${APIURL}card/getall`, {
       method: "GET",
       headers: new Headers({
         "Content-Type": "application/json",

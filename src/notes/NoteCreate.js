@@ -11,6 +11,7 @@ import {
   ModalBody,
   ModalFooter
 } from "reactstrap";
+import APIURL from "../helpers/environment";
 
 class NoteCreate extends Component {
   constructor(props) {
@@ -37,7 +38,7 @@ class NoteCreate extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    fetch(`http://localhost:3001/note/create`, {
+    fetch(`${APIURL}note/create`, {
       method: "POST",
       body: JSON.stringify({ note: this.state }),
       headers: new Headers({

@@ -10,6 +10,7 @@ import {
   ModalHeader,
   ModalBody
 } from "reactstrap";
+import APIURL from "../helpers/environment";
 
 class CardEdit extends React.Component {
   constructor(props) {
@@ -25,7 +26,7 @@ class CardEdit extends React.Component {
   }
 
   cardUpdate = (event, card) => {
-    fetch(`http://localhost:3001/card/${card.id}/update`, {
+    fetch(`${APIURL}card/${card.id}/update`, {
       //here also
       method: "PUT",
       body: JSON.stringify({ card: card }),

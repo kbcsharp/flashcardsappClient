@@ -11,6 +11,7 @@ import {
   ModalBody,
   ModalFooter
 } from "reactstrap";
+import APIURL from "../helpers/environment";
 
 class CardCreate extends Component {
   constructor(props) {
@@ -37,7 +38,7 @@ class CardCreate extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    fetch(`http://localhost:3001/card/create`, {
+    fetch(`${APIURL}card/create`, {
       method: "POST",
       body: JSON.stringify({ card: this.state }),
       headers: new Headers({

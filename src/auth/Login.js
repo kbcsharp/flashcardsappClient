@@ -10,6 +10,7 @@ import {
   ModalBody,
   ModalFooter
 } from "reactstrap";
+import APIURL from "../helpers/environment";
 
 class Login extends Component {
   constructor(props) {
@@ -34,7 +35,7 @@ class Login extends Component {
   };
 
   handleSubmit = event => {
-    fetch("http://localhost:3001/user/login", {
+    fetch(`${APIURL}user/login`, {
       method: "POST",
       body: JSON.stringify({ user: this.state }),
       headers: new Headers({

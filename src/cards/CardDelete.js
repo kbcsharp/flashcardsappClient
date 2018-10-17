@@ -10,6 +10,7 @@ import {
   ModalHeader,
   ModalBody
 } from "reactstrap";
+import APIURL from "../helpers/environment";
 
 class CardDelete extends React.Component {
   constructor(props) {
@@ -25,7 +26,7 @@ class CardDelete extends React.Component {
   }
 
   cardDelete = (event, card) => {
-    fetch(`http://localhost:3001/card/${card.id}/delete`, {
+    fetch(`${APIURL}card/${card.id}/delete`, {
       method: "DELETE",
       body: JSON.stringify({ card: card }),
       headers: new Headers({

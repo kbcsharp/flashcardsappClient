@@ -10,6 +10,7 @@ import {
   ModalHeader,
   ModalBody
 } from "reactstrap";
+import APIURL from "../helpers/environment";
 
 class NoteDelete extends React.Component {
   constructor(props) {
@@ -25,7 +26,7 @@ class NoteDelete extends React.Component {
   }
 
   noteDelete = (event, note) => {
-    fetch(`http://localhost:3001/note/${note.id}/delete`, {
+    fetch(`${APIURL}note/${note.id}/delete`, {
       method: "DELETE",
       body: JSON.stringify({ note: note }),
       headers: new Headers({

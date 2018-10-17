@@ -5,6 +5,7 @@ import paper from "../paper.svg";
 import NoteCreate from "../notes/NoteCreate";
 import NoteEdit from "../notes/NoteEdit";
 import NoteDelete from "../notes/NoteDelete";
+import APIURL from "../helpers/environment";
 
 class NoteLayout extends Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class NoteLayout extends Component {
   }
 
   fetchNotes = () => {
-    fetch("http://localhost:3001/note/getall", {
+    fetch(`${APIURL}note/getall`, {
       method: "GET",
       headers: new Headers({
         "Content-Type": "application/json",

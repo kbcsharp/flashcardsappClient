@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import Card from "./Card";
 import Card2 from "./Card2";
 import { Button } from "reactstrap";
+import APIURL from "../helpers/environment";
 
 class CardLayout extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class CardLayout extends Component {
   }
 
   fetchCards = () => {
-    fetch("http://localhost:3001/card/getall", {
+    fetch(`${APIURL}card/getall`, {
       method: "GET",
       headers: new Headers({
         "Content-Type": "application/json",
