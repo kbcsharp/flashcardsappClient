@@ -38,7 +38,7 @@ class CardCreate extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    fetch(`${APIURL}card/create`, {
+    fetch(`${APIURL}/card/create`, {
       method: "POST",
       body: JSON.stringify({ card: this.state }),
       headers: new Headers({

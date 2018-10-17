@@ -26,7 +26,7 @@ class CardEdit extends React.Component {
   }
 
   cardUpdate = (event, card) => {
-    fetch(`${APIURL}card/${card.id}/update`, {
+    fetch(`${APIURL}/card/${card.id}/update`, {
       //here also
       method: "PUT",
       body: JSON.stringify({ card: card }),

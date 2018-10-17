@@ -32,7 +32,7 @@ class Signup extends Component {
   };
 
   handleSubmit = event => {
-    fetch(`${APIURL}user/signup`, {
+    fetch(`${APIURL}/user/signup`, {
       method: "POST", //2
       body: JSON.stringify({ user: this.state }), //added signupinfo here
       headers: new Headers({

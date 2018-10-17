@@ -35,7 +35,7 @@ class Login extends Component {
   };
 
   handleSubmit = event => {
-    fetch(`${APIURL}user/login`, {
+    fetch(`${APIURL}/user/login`, {
       method: "POST",
       body: JSON.stringify({ user: this.state }),
       headers: new Headers({

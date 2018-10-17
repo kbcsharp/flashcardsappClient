@@ -38,7 +38,7 @@ class NoteCreate extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    fetch(`${APIURL}note/create`, {
+    fetch(`${APIURL}/note/create`, {
       method: "POST",
       body: JSON.stringify({ note: this.state }),
       headers: new Headers({

@@ -24,7 +24,7 @@ class DeckCardsLayout extends Component {
   }
 
   fetchCardsAll = () => {
-    fetch(`${APIURL}card/getall`, {
+    fetch(`${APIURL}/card/getall`, {
       method: "GET",
       headers: new Headers({
         "Content-Type": "application/json",

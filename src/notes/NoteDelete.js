@@ -26,7 +26,7 @@ class NoteDelete extends React.Component {
   }
 
   noteDelete = (event, note) => {
-    fetch(`${APIURL}note/${note.id}/delete`, {
+    fetch(`${APIURL}/note/${note.id}/delete`, {
       method: "DELETE",
       body: JSON.stringify({ note: note }),
       headers: new Headers({

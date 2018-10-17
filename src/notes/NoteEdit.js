@@ -26,7 +26,7 @@ class NoteEdit extends React.Component {
   }
 
   noteUpdate = (event, note) => {
-    fetch(`${APIURL}note/${note.id}/update`, {
+    fetch(`${APIURL}/note/${note.id}/update`, {
       //here also
       method: "PUT",
       body: JSON.stringify({ note: note }),

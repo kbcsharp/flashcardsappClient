@@ -26,7 +26,7 @@ class CardDelete extends React.Component {
   }
 
   cardDelete = (event, card) => {
-    fetch(`${APIURL}card/${card.id}/delete`, {
+    fetch(`${APIURL}/card/${card.id}/delete`, {
       method: "DELETE",
       body: JSON.stringify({ card: card }),
       headers: new Headers({

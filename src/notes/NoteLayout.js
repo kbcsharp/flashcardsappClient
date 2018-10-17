@@ -23,7 +23,7 @@ class NoteLayout extends Component {
   }
 
   fetchNotes = () => {
-    fetch(`${APIURL}note/getall`, {
+    fetch(`${APIURL}/note/getall`, {
       method: "GET",
       headers: new Headers({
         "Content-Type": "application/json",
