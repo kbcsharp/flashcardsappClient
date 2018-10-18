@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, FormGroup, Button, Input } from "reactstrap";
+import { Form, FormGroup, Button, Input, Tooltip } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import deck from "../deck.jpeg";
 import DeckCard from "./DeckCard";
@@ -118,7 +118,7 @@ class DeckCardsLayout extends Component {
   render() {
     return (
       <div style={{ textAlign: "center" }}>
-        <Button className="mt-2" onClick={this.getCategories}>
+        <Button className="mt-1" onClick={this.getCategories}>
           Display/Update Decks
         </Button>
         <div>
@@ -126,7 +126,8 @@ class DeckCardsLayout extends Component {
             <FormGroup style={{ display: "flex", justifyContent: "center" }}>
               {this.state.categories.map((category, index) => (
                 <Input
-                  className="ml-1"
+                  key={index}
+                  className="ml-1 mt-1"
                   type="image"
                   src={deck}
                   alt="photo of index card deck"
@@ -137,7 +138,7 @@ class DeckCardsLayout extends Component {
                     height: "60px"
                   }}
                   // className="ml-2"
-                  key={index}
+                  // key={index}
                   name={category}
                   value={category}
                   onClick={this.showDeck}

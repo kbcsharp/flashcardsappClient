@@ -42,11 +42,13 @@ const FrontComponent2 = props => {
         }}
       >
         {props.number > 1 ? (
-          <Button onClick={props.prevCard}>
-            <FontAwesomeIcon icon="angle-left" />
-          </Button>
+          <FontAwesomeIcon
+            style={{ fontSize: "2em" }}
+            onClick={props.prevCard}
+            icon="angle-left"
+          />
         ) : (
-          <div />
+          <div style={{ width: "17px" }} />
         )}
 
         <FontAwesomeIcon
@@ -61,7 +63,7 @@ const FrontComponent2 = props => {
             icon="angle-right"
           />
         ) : (
-          <div />
+          <div style={{ width: "16px" }} />
         )}
       </div>
       {/* </div> */}
