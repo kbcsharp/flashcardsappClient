@@ -61,9 +61,11 @@ class NoteCreate extends Component {
   render() {
     return (
       <div>
-        <Button className="btn-sm mt-3 mr-3" onClick={this.toggle}>
-          <FontAwesomeIcon icon="plus" />
-        </Button>
+        <FontAwesomeIcon
+          style={{ fontSize: "2em", marginTop: "15px", color: "green" }}
+          onClick={this.toggle}
+          icon="plus"
+        />
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
           <ModalHeader
             style={{ backgroundColor: "#C63456", color: "white" }}

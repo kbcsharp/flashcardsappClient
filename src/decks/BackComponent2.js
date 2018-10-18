@@ -30,13 +30,11 @@ const BackComponent2 = props => {
       >
         <div>{props.answer}</div>
         <div style={{ textAlign: "center" }}>
-          <Button
-            style={{ width: "30px" }}
-            className="btn-sm"
+          <FontAwesomeIcon
+            style={{ fontSize: "2em" }}
             onClick={props.handleClick}
-          >
-            <FontAwesomeIcon icon="reply" />
-          </Button>
+            icon="reply"
+          />
         </div>
       </div>
     </div>

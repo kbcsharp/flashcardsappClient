@@ -70,9 +70,11 @@ class NoteDelete extends React.Component {
   render() {
     return (
       <div>
-        <Button className="btn-sm mt-3 ml-3" onClick={this.toggle}>
-          <FontAwesomeIcon icon="times" />
-        </Button>
+        <FontAwesomeIcon
+          style={{ fontSize: "2em", color: "red", marginTop: "15px" }}
+          onClick={this.toggle}
+          icon="times"
+        />
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
           <ModalHeader style={{ backgroundColor: "#C63456", color: "white" }}>
             Delete Note

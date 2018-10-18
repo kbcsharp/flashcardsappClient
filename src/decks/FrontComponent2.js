@@ -20,15 +20,18 @@ const FrontComponent2 = props => {
       <div
         style={{
           width: "500px",
-          display: "flex"
+          display: "flex",
+          justifyContent: "space-between"
         }}
       >
-        {props.number} of {props.total}
+        <div>
+          {props.number} of {props.total}
+        </div>
+        <div>
+          <h4>{props.category}</h4>
+        </div>
       </div>
 
-      <div>
-        <h4 style={{ margin: "-80px" }}>{props.category}</h4>
-      </div>
       <div style={{ width: "400px" }}>{props.question}</div>
       <div
         style={{

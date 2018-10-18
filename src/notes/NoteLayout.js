@@ -74,7 +74,7 @@ class NoteLayout extends Component {
   };
 
   resetCurrentNote = () => {
-    this.setState({ currentNote: {} });
+    this.setState({ currentNote: {}, category: "" });
   };
 
   handleSubmit = event => {
@@ -159,7 +159,7 @@ class NoteLayout extends Component {
                   style={{
                     display: "flex",
                     flexDirection: "column",
-                    marginTop: "45px"
+                    marginTop: "40px"
                   }}
                 >
                   <h3 style={{ textAlign: "center" }}>{this.state.category}</h3>
