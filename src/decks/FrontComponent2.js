@@ -32,41 +32,53 @@ const FrontComponent2 = props => {
         </div>
       </div>
 
-      <div style={{ width: "400px" }}>{props.question}</div>
       <div
         style={{
+          height: "300px",
           width: "500px",
           display: "flex",
+          flexDirection: "column",
+          textAlign: "center",
           justifyContent: "space-between",
-          textAlign: "center"
+          alignItems: "center",
+          paddingTop: "65px"
         }}
       >
-        {props.number > 1 ? (
-          <FontAwesomeIcon
-            style={{ fontSize: "2em" }}
-            onClick={props.prevCard}
-            icon="angle-left"
-          />
-        ) : (
-          <div style={{ width: "17px" }} />
-        )}
+        <div style={{ width: "400px" }}>{props.question}</div>
+        <div
+          style={{
+            width: "500px",
+            display: "flex",
+            justifyContent: "space-between",
+            textAlign: "center"
+          }}
+        >
+          {props.number > 1 ? (
+            <FontAwesomeIcon
+              style={{ fontSize: "2em" }}
+              onClick={props.prevCard}
+              icon="angle-left"
+            />
+          ) : (
+            <div style={{ width: "17px" }} />
+          )}
 
-        <FontAwesomeIcon
-          style={{ fontSize: "2em" }}
-          onClick={props.handleClick}
-          icon="share"
-        />
-        {props.number < props.total ? (
           <FontAwesomeIcon
             style={{ fontSize: "2em" }}
-            onClick={props.nextCard}
-            icon="angle-right"
+            onClick={props.handleClick}
+            icon="share"
           />
-        ) : (
-          <div style={{ width: "16px" }} />
-        )}
+          {props.number < props.total ? (
+            <FontAwesomeIcon
+              style={{ fontSize: "2em" }}
+              onClick={props.nextCard}
+              icon="angle-right"
+            />
+          ) : (
+            <div style={{ width: "16px" }} />
+          )}
+        </div>
       </div>
-      {/* </div> */}
     </div>
   );
 };
