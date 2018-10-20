@@ -21,7 +21,8 @@ class CardDelete extends React.Component {
       question: "",
       answer: "",
       category: "",
-      modal: false
+      modal: false,
+      cardNumber: ""
     };
   }
 
@@ -33,14 +34,44 @@ class CardDelete extends React.Component {
         "Content-Type": "application/json",
         Authorization: this.props.token
       })
-    }).then(res => {
-      this.props.updateCardsArray();
-      this.props.getCurrentCard();
-      this.setState({
-        modal: false
+    })
+      .then(res => {
+        this.props.prevCard();
+      })
+      // .then(res => {
+      //   this.props.updateCardsArray();
+      // })
+      .then(res => {
+        this.props.updateCards();
+      })
+      .then(res => {
+        this.props.getCurrentCard();
+      })
+      .then(res => {
+        this.props.updateCardTotal();
+      })
+      .then(res => {
+        this.setState({
+          id: this.props.cardnow.id,
+          question: this.props.cardnow.question,
+          answer: this.props.cardnow.answer,
+          category: this.props.cardnow.category,
+          modal: false
+        });
       });
-    });
   };
+  //   }).then(res => {
+  //     this.props.updateCardsArray()
+  //     this.props.getCurrentCard()
+  //     this.setState({
+  //       id: this.props.cardnow.id,
+  //       question: this.props.cardnow.question,
+  //       answer: this.props.cardnow.answer,
+  //       category: this.props.cardnow.category,
+  //       modal: false
+  //     });
+  //   });
+  // };
 
   toggle = () => {
     this.setState({

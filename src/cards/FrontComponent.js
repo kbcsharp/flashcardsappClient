@@ -1,6 +1,5 @@
 import React from "react";
 import indexcard from "../indexcard.jpeg";
-import { Button } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CardCreate from "./CardCreate";
 import CardEdit from "./CardEdit";
@@ -47,6 +46,9 @@ const FrontComponent = props => {
           cardnow={props.cardnow}
           updateCardsArray={props.updateCardsArray}
           getCurrentCard={props.getCurrentCard}
+          prevCard={props.prevCard}
+          updateCards={props.updateCards}
+          updateCardTotal={props.updateCardTotal}
         />
       </div>
       <div

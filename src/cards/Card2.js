@@ -14,7 +14,7 @@ class Card2 extends Component {
     };
   }
 
-  handleCllick = e => {
+  handleClick = e => {
     e.preventDefault();
     let toggle = this.state.isFlipped;
     this.setState({ isFlipped: !toggle });
@@ -52,11 +52,13 @@ class Card2 extends Component {
                     number={this.props.number}
                     total={this.props.total}
                     cardnow={this.props.cardnow}
-                    handleClick={this.handleCllick}
+                    handleClick={this.handleClick}
                     updateCardsArray={this.props.updateCardsArray}
                     getCurrentCard={this.props.getCurrentCard}
                     prevCard={this.props.prevCard}
                     nextCard={this.props.nextCard}
+                    updateCards={this.props.updateCards}
+                    updateCardTotal={this.props.updateCardTotal}
                     key="front"
                   >
                     {/* <Button className="btn-sm mt-5" onClick={this.handleClick}>
@@ -71,7 +73,7 @@ class Card2 extends Component {
                     number={this.props.number}
                     total={this.props.total}
                     cardnow={this.props.cardnow}
-                    handleClick={this.handleCllick}
+                    handleClick={this.handleClick}
                     key="back"
                   />
                 </ReactCardFlip>

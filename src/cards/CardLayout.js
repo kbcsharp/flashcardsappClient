@@ -16,7 +16,7 @@ class CardLayout extends Component {
       cards: [],
       cardNumber: 1,
       index: 0,
-      cardTotal: "",
+      cardTotal: 0,
       currentCard: {}
     };
   }
@@ -45,20 +45,10 @@ class CardLayout extends Component {
 
   getCurrentCard = () => {
     let currentCardHolder = this.state.cards[this.state.index];
-    console.log(currentCardHolder);
     this.setState({
       currentCard: currentCardHolder
     });
   };
-
-  // getCardTotal = () => {
-  //   //not working
-  //   let array = this.state.cards;
-  //   let total = array.length;
-  //   this.setState({
-  //     cardTotal: total
-  //   });
-  // };
 
   nextCard = () => {
     let cardsHolder = this.state.cards;
@@ -96,6 +86,17 @@ class CardLayout extends Component {
     }
   };
 
+  updateCards = () => {
+    let updateCardsHolder = this.state.cards;
+    updateCardsHolder.pop();
+    this.setState({ cards: updateCardsHolder });
+  };
+  updateCardTotal = () => {
+    let cardTotalHolder = this.state.cardTotal;
+    cardTotalHolder -= 1;
+    this.setState({ cardTotal: cardTotalHolder });
+  };
+
   render() {
     return (
       <div style={{ width: "500px" }}>
@@ -120,6 +121,8 @@ class CardLayout extends Component {
               getCurrentCard={this.getCurrentCard}
               prevCard={this.prevCard}
               nextCard={this.nextCard}
+              updateCards={this.updateCards}
+              updateCardTotal={this.updateCardTotal}
             />
           ) : null}
         </div>
