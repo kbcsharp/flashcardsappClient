@@ -91,6 +91,7 @@ class CardLayout extends Component {
     updateCardsHolder.pop();
     this.setState({ cards: updateCardsHolder });
   };
+
   updateCardTotal = () => {
     let cardTotalHolder = this.state.cardTotal;
     cardTotalHolder -= 1;

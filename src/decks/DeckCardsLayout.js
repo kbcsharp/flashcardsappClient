@@ -49,7 +49,6 @@ class DeckCardsLayout extends Component {
   getCategories = () => {
     this.fetchCardsAll();
     let allCards = this.state.cards;
-    console.log(allCards);
     let categories = [];
     allCards.filter(card => {
       categories.push(card.category);
@@ -59,7 +58,7 @@ class DeckCardsLayout extends Component {
 
   showDeck = event => {
     event.preventDefault();
-    this.setState({ index: 0, cardNumber: 1 });
+    // this.setState({ index: 0, cardNumber: 1 });
     let cat = event.target.value;
     let newArray = [];
     this.state.cards.filter(card => {
@@ -67,8 +66,14 @@ class DeckCardsLayout extends Component {
         newArray.push(card);
       }
     });
-    this.setState({ deck: newArray, category: newArray[0].category });
-    this.getCurrentCard();
+    this.setState({
+      index: 0,
+      cardNumber: 1,
+      deck: newArray,
+      category: newArray[0].category,
+      currentCard: newArray[0],
+      cardTotal: newArray.length
+    });
   };
 
   getCurrentCard = () => {
