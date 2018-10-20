@@ -38,30 +38,6 @@ class NoteLayout extends Component {
       });
   };
 
-  // fetchNoteCategory = () => {
-  //   fetch(`http://localhost:3001/note/${this.state.category}/all`, {
-  //     method: "GET",
-  //     headers: new Headers({
-  //       "Content-Type": "application/json",
-  //       Authorization: this.props.token
-  //     })
-  //   })
-  //     .then(res => res.json())
-  //     .then(logData => {
-  //       return this.setState({
-  //         currentNote: logData
-  //       });
-  //     });
-  // };
-
-  // handleSubmit = event => {
-  //   event.preventDefault();
-  //   this.setState({
-  //     category: event.target.value
-  //   });
-  //   this.fetchNoteCategory();
-  // };
-
   getCurrentNote = cat => {
     const result = this.state.notes.filter(note => note.category === cat);
     this.setState({
@@ -122,6 +98,8 @@ class NoteLayout extends Component {
             <div style={props}>
               <div
                 style={{
+                  borderRadiusTopRight: "10%",
+                  boxShadow: "-15px 15px 15px rgba(39, 70, 89, 0.9)",
                   backgroundImage: `url(${paper})`,
                   width: "765px",
                   height: "990px",

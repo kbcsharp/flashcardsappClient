@@ -105,7 +105,9 @@ class NoteCreate extends Component {
                   onChange={this.handleChange}
                 />
               </FormGroup>
-              <Button type="submit">Submit</Button>
+              <Button color="success" type="submit">
+                Create!
+              </Button>
             </Form>
           </ModalBody>
         </Modal>

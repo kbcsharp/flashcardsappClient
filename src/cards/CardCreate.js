@@ -71,7 +71,7 @@ class CardCreate extends Component {
             style={{ backgroundColor: "#C63456", color: "white" }}
             toggle={this.toggle}
           >
-            Add FlashCard
+            Create New FlashCard
           </ModalHeader>
           <ModalBody style={{ backgroundColor: "#286b88", color: "white" }}>
             <Form onSubmit={this.handleSubmit}>
@@ -105,7 +105,9 @@ class CardCreate extends Component {
                   onChange={this.handleChange}
                 />
               </FormGroup>
-              <Button type="submit">Submit</Button>
+              <Button color="success" type="submit">
+                Create!
+              </Button>
             </Form>
           </ModalBody>
         </Modal>

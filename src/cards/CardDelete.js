@@ -38,9 +38,6 @@ class CardDelete extends React.Component {
       .then(res => {
         this.props.prevCard();
       })
-      // .then(res => {
-      //   this.props.updateCardsArray();
-      // })
       .then(res => {
         this.props.updateCards();
       })
@@ -60,18 +57,6 @@ class CardDelete extends React.Component {
         });
       });
   };
-  //   }).then(res => {
-  //     this.props.updateCardsArray()
-  //     this.props.getCurrentCard()
-  //     this.setState({
-  //       id: this.props.cardnow.id,
-  //       question: this.props.cardnow.question,
-  //       answer: this.props.cardnow.answer,
-  //       category: this.props.cardnow.category,
-  //       modal: false
-  //     });
-  //   });
-  // };
 
   toggle = () => {
     this.setState({
@@ -104,7 +89,7 @@ class CardDelete extends React.Component {
         />
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
           <ModalHeader style={{ backgroundColor: "#C63456", color: "white" }}>
-            Delete Flashcard
+            Delete Current Flashcard
           </ModalHeader>
           <ModalBody style={{ backgroundColor: "#286b88", color: "white" }}>
             <Form onSubmit={this.handleSubmit}>
@@ -141,7 +126,10 @@ class CardDelete extends React.Component {
                   onChange={this.handleChange}
                 />
               </FormGroup>
-              <Button type="submit"> Submit </Button>
+              <Button color="danger" type="submit">
+                {" "}
+                Confirm Card Delete{" "}
+              </Button>
             </Form>
           </ModalBody>
         </Modal>

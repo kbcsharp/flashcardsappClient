@@ -74,7 +74,7 @@ class NoteEdit extends React.Component {
         />
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
           <ModalHeader style={{ backgroundColor: "#C63456", color: "white" }}>
-            Edit Note
+            Edit Current Note
           </ModalHeader>
           <ModalBody style={{ backgroundColor: "#286b88", color: "white" }}>
             <Form onSubmit={this.handleSubmit}>
@@ -111,7 +111,9 @@ class NoteEdit extends React.Component {
                   onChange={this.handleChange}
                 />
               </FormGroup>
-              <Button type="submit"> Submit </Button>
+              <Button color="primary" type="submit">
+                Confirm Note Edit
+              </Button>
             </Form>
           </ModalBody>
         </Modal>

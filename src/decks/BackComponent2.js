@@ -7,6 +7,7 @@ const BackComponent2 = props => {
   return (
     <div
       style={{
+        boxShadow: "15px 15px 15px rgba(39, 70, 89, 0.9)",
         display: "flex",
         backgroundImage: `url(${indexcard})`,
         width: "500px",

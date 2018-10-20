@@ -74,7 +74,7 @@ class CardEdit extends React.Component {
         />
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
           <ModalHeader style={{ backgroundColor: "#C63456", color: "white" }}>
-            Edit Flashcard
+            Edit Current Flashcard
           </ModalHeader>
           <ModalBody style={{ backgroundColor: "#286b88", color: "white" }}>
             <Form onSubmit={this.handleSubmit}>
@@ -111,7 +111,10 @@ class CardEdit extends React.Component {
                   onChange={this.handleChange}
                 />
               </FormGroup>
-              <Button type="submit"> Submit </Button>
+              <Button color="primary" type="submit">
+                {" "}
+                Confirm Card Edit{" "}
+              </Button>
             </Form>
           </ModalBody>
         </Modal>
