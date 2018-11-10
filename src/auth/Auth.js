@@ -25,7 +25,7 @@ const Auth = ({ setToken }) => {
               </div>
             )}
           </Spring>
-          <p>The app for all of your flaschards and study notes!</p>
+          <p>The app for all of your flashcards and study notes!</p>
           <hr />
           <Spring
             from={{ opacity: 0 }}
