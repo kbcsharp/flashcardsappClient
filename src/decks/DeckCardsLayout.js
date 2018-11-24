@@ -135,6 +135,7 @@ class DeckCardsLayout extends Component {
                   className="ml-1 mt-1"
                   type="image"
                   src={deck}
+                  title={category}
                   alt="photo of index card deck"
                   style={{
                     color: "black",
